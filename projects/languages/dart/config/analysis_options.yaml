@@ -1,0 +1,37 @@
+analyzer:
+  exclude:
+    - build/** # Игнорировать сгенерированные файлы
+    - .dart_tool/** # Игнорировать файлы в системной папке
+    - test/tmp/** # Игнорировать временные файлы в тестах
+
+  strong-mode:
+    implicit-casts: false # Запретить неявные преобразования типов
+    implicit-dynamic: false # Запретить неявное использование dynamic
+
+linter:
+  rules:
+    - always_specify_types # Всегда указывать типы переменных
+    - avoid_classes_with_only_static_members # Избегать классов, содержащих только static
+    - avoid_print # Запретить использование print
+    - avoid_redundant_argument_values # Избегать лишних аргументов
+    - cancel_subscriptions # Отменять потоки после завершения работы
+    - close_sinks # Закрывать все потоки
+    - prefer_final_in_for_each # Использовать final в циклах forEach
+    - prefer_const_constructors # Использовать const там, где возможно
+    - prefer_collection_literals # Использовать литералы коллекций
+    - use_function_type_syntax_for_parameters # Использовать синтаксис типов функций
+    - strict_raw_type # Запретить использование необработанных типов
+    - test_types_in_equals # Проверять типы в методе equals
+    - annotate_overrides # Аннотировать все методы, переопределённые из суперклассов
+    - public_member_api_docs # Документировать публичные члены
+    - avoid_setters_without_getters # Избегать сеттеров без геттеров
+    - prefer_final_locals # Использовать final для локальных переменных
+    - prefer_is_not_empty # Использовать isNotEmpty вместо length > 0
+    - prefer_typing_uninitialized_variables # Указывать тип для неинициализированных переменных
+    - unnecessary_this # Избегать избыточного использования this
+    - use_key_in_widget_constructors # Использовать ключи в конструкторах виджетов
+    - use_late_for_private_fields_with_initializers # Использовать late для полей с инициализацией
+    - no_leading_underscores_for_local_identifiers # Не использовать подчеркивания в локальных идентификаторах
+
+formatter:
+  preferred: dartfmt
